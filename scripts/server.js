@@ -27,10 +27,7 @@ app.use(cors({
 }));
 
 app.get("*", cors(), (req, res) => {
-  console.info("GET /simple-cors");
-  res.json({
-    text: "Simple CORS requests are working. [GET]"
-  });
+  res.sendStatus(200);
 });
 app.use(function (req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');

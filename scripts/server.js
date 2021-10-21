@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3001;
 const DIST_DIR = './dist';
 
 app.use(function (req, res, next) {
+	console.log(JSON.stringify(req));
   res.header("Access-Control-Allow-Origin",
     req.get("Origin") || "*");
   res.header("Access-Control-Allow-Credentials", "true");

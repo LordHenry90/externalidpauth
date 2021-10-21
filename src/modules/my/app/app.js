@@ -27,10 +27,9 @@ export default class App extends LightningElement {
 						'Authorization' : 'Bearer ' + access_token,
 						'Accept' : 'application/json',
 						"Access-Control-Allow-Origin": '*',
-						"Access-Control-Allow-Credentials":"true",
 						"Access-Control-Allow-Methods":"GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
 						"Access-Control-Expose-Headers":"Content-Length",
-						"Access-Control-Allow-Headers":"Accept, Authorization, Content-Type, X-Requested-With, Range,append,delete,entries,foreach,get,has,keys,set,values,Authorization",
+						"Access-Control-Allow-Headers":"Accept, Authorization, Content-Type, X-Requested-With, Range,append,delete,entries,foreach,get,has,keys,set,values",
 						"Content-Security-Policy":"connect-src 'self' https://notaroenrico-dev-ed.my.salesforce.com/"
 						
 					}

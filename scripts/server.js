@@ -32,7 +32,10 @@ app.get("/oauth2/userinfo", cors(), (req, res) => {
     text: "Simple CORS requests are working. [GET]"
   });
 });
-
+app.use(function (req, res, next) {
+	res.header("Content-Security-Policy","connect-src 'self' https://notaroenrico-dev-ed.my.salesforce.com/")
+  next();
+});
 /*app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin",
     "*");

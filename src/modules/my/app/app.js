@@ -27,7 +27,7 @@ export default class App extends LightningElement {
 						'Content-Type': 'application/json' ,
 						'Authorization' : 'Bearer ' + access_token,
 						'Accept' : 'application/json',
-						"Access-Control-Allow-Origin": 'https://externalidpauth.herokuapp.com',
+						"Access-Control-Allow-Origin": '*',
 						"Access-Control-Allow-Credentials":"true",
 						"Access-Control-Allow-Methods":"GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
 						"Access-Control-Expose-Headers":"Content-Length",

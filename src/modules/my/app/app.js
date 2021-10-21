@@ -21,10 +21,10 @@ export default class App extends LightningElement {
                 '/services/oauth2/userinfo',
                 {
                     method: 'GET',
-					format: 'json',
                     headers: { 
 						'Content-Type': 'application/json' ,
-						'Authorization' : access_token
+						'Authorization' : access_token,
+						'Accept' : 'application/json'
 					}
                 }
             )

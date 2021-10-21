@@ -24,7 +24,6 @@ export default class App extends LightningElement {
 					mode: 'cors',
                     headers: { 
 						'Content-Type': 'application/json' ,
-						'Authorization' : 'Bearer ' + access_token,
 						'Accept' : 'application/json'/*,
 						"Access-Control-Allow-Origin": '*',
 						"Access-Control-Allow-Methods":"GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",

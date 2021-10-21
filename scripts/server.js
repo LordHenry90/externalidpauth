@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
     req.get("Origin") || "*");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Methods",
-    "GET,HEAD,PUT,PATCH,POST,DELETE");
+    "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS");
   res.header("Access-Control-Expose-Headers", "Content-Length");
   res.header("Access-Control-Allow-Headers",
     "Accept, Authorization, Content-Type, X-Requested-With, Range");

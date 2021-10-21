@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Expose-Headers", "Content-Length");
   res.header("Access-Control-Allow-Headers",
     "Accept, Authorization, Content-Type, X-Requested-With, Range");
-	res.header("Content-Security-Policy","default-src 'self'")
+	res.header("Content-Security-Policy","connect-src 'self' https://notaroenrico-dev-ed.my.salesforce.com/")
   next();
 });
 

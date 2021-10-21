@@ -28,9 +28,7 @@ export default class App extends LightningElement {
 					}
                 }
             )
-                .then((response) => 
-					console.log(response);
-					)
+                .then((response) => console.log(response.text()))
                 .then((data) => {
                     console.log(data);
                     this.loggedUser = data;

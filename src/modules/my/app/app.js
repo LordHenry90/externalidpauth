@@ -18,7 +18,7 @@ export default class App extends LightningElement {
         } else {
             console.log('fetch');
             fetch(
-                this.SALESFORCE_URL + 'services/oauth2/userinfo',
+                this.SALESFORCE_URL + 'services/oauth2/userinfo?access_token=' + access_token + '&format=json',
                 {
                     method: 'GET',
 					mode: 'cors',

@@ -6,7 +6,7 @@
             <template if:true={loggedUser}>
                 <span class="user-display-name">{loggedUser.name}</span>
                 <br />
-                <a href="/oauth2/logout">
+                <a href={logoutURL}>
                     <button type="button" class="brand">Log Out</button>
                 </a>
             </template>

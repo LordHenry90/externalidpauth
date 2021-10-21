@@ -23,8 +23,10 @@ export default class App extends LightningElement {
                 {
                     method: 'GET',
 					format: 'json',
-                    headers: { 'Content-Type': 'application/json' ,
-					'Authorization' : access_token}
+                    headers: { 
+						'Content-Type': 'application/json' ,
+						'Authorization' : access_token
+					}
                 }
             )
                 .then((response) => response.json())

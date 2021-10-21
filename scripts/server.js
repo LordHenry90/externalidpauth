@@ -15,7 +15,6 @@ const DIST_DIR = './dist';
 
 app.use(cors())
 
-app.options('*', cors())
 
 app.use(cors({
   origin: '*',
@@ -26,8 +25,8 @@ app.use(cors({
   optionsSuccessStatus: 200
 }));
 
-app.get("*", cors(), (req, res) => {
-  res.sendStatus(200);
+app.options('/*', (_, res) => {
+    res.sendStatus(200);
 });
 app.use(function (req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');

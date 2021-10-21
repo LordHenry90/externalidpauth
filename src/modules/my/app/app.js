@@ -18,7 +18,7 @@ export default class App extends LightningElement {
         } else {
             console.log('fetch');
             fetch(
-                'https://login.salesforce.com/services/oauth2/userinfo',
+                '/services/oauth2/userinfo',
                 {
                     method: 'GET',
                     headers: { 
@@ -28,7 +28,9 @@ export default class App extends LightningElement {
 					}
                 }
             )
-                .then((response) => response.json())
+                .then((response) => 
+					console.log(response);
+					)
                 .then((data) => {
                     console.log(data);
                     this.loggedUser = data;

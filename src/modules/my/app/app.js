@@ -21,11 +21,13 @@ export default class App extends LightningElement {
                 this.SALESFORCE_URL + 'services/oauth2/userinfo',
                 {
                     method: 'GET',
+					mode: 'cors',
+					credentials: 'include',
                     headers: { 
 						'Content-Type': 'application/json' ,
 						'Authorization' : 'Bearer ' + access_token,
 						'Accept' : 'application/json',
-						"Access-Control-Allow-Origin": '*'
+						"Access-Control-Allow-Origin": 'https://notaroenrico-dev-ed.my.salesforce.com/'
 					}
                 }
             )

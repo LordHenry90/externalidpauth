@@ -21,7 +21,6 @@ export default class App extends LightningElement {
                 this.SALESFORCE_URL + 'services/oauth2/userinfo',
                 {
                     method: 'GET',
-					mode: 'no-cors',
 					credentials: 'include',
                     headers: { 
 						'Content-Type': 'application/json' ,

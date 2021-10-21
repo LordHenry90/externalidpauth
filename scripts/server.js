@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
 	res.header("Content-Security-Policy","connect-src 'self' https://notaroenrico-dev-ed.my.salesforce.com/")
   if (req.method === 'OPTIONS') {
-    res.status(200);
+    res.status(204);
 } next();
 });
 

@@ -23,9 +23,6 @@ app.use(function (req, res, next) {
 } next();
 });
 
-app.options('/*', (_, res) => {
-    res.sendStatus(200);
-});
 /*app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin",
     "*");

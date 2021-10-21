@@ -26,7 +26,7 @@ app.use(cors({
   optionsSuccessStatus: 200
 }));
 
-app.get("/oauth2/userinfo", cors(), (req, res) => {
+app.get("*", cors(), (req, res) => {
   console.info("GET /simple-cors");
   res.json({
     text: "Simple CORS requests are working. [GET]"

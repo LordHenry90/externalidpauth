@@ -22,7 +22,6 @@ export default class App extends LightningElement {
                 {
                     method: 'GET',
 					mode: 'cors',
-					credentials: 'include',
                     headers: { 
 						'Content-Type': 'application/json' ,
 						'Authorization' : 'Bearer ' + access_token,

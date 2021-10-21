@@ -3,7 +3,6 @@ const compression = require('compression');
 const helmet = require('helmet');
 const express = require('express');
 const path = require('path');
-var cors = require('cors');
 
 const app = express();
 app.use(helmet());
@@ -13,27 +12,17 @@ const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3001;
 const DIST_DIR = './dist';
 
-app.use(cors())
 
-
-app.use(cors({
-  origin: '*',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-  allowedHeaders: 'Accept, Authorization, Content-Type, X-Requested-With, Range,append,delete,entries,foreach,get,has,keys,set,values',
-  exposedHeaders: 'Content-Length',
-  preflightContinue : true,
-  optionsSuccessStatus: 200
-}));
-
-app.options('/*', (_, res) => {
-    res.sendStatus(200);
-});
 app.use(function (req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
 	res.header("Content-Security-Policy","connect-src 'self' https://notaroenrico-dev-ed.my.salesforce.com/")
   next();
+});
+
+app.options('/*', (_, res) => {
+    res.sendStatus(200);
 });
 /*app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin",

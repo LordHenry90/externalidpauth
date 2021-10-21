@@ -19,13 +19,12 @@ export default class App extends LightningElement {
             console.log('fetch');
             fetch(
                 this.SALESFORCE_URL +
-                    'services/oauth2/userinfo?access_token=' +
-                    access_token +
-                    '&format=json',
+                    'services/oauth2/userinfo',
                 {
                     method: 'GET',
-                    mode: 'cors',
-                    headers: { 'Content-Type': 'application/json' }
+					format: 'json',
+                    headers: { 'Content-Type': 'application/json' ,
+					'Authorization' : access_token}
                 }
             )
                 .then((response) => response.json())

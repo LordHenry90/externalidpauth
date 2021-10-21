@@ -29,12 +29,14 @@ export default class App extends LightningElement {
 					}
                 }
             )
-                .then((response) => console.log(response.text()))
-                .then((data) => {
-                    console.log(data);
+                .then((response) => {
+						return response.json(); // returning the response in the form of JSON
+		})
+                .then((jsonResponse) => {
+                    console.log('jsonResponse ===> '+JSON.stringify(jsonResponse));
                     this.loggedUser = data;
                 })
-                .catch((error) => console.log(error));
+                .catch((error) => console.log('callout error ===> '+JSON.stringify(error)));
         }
         /*getLoggedInUser().then((response) => {
             if (response.user_id === undefined) {

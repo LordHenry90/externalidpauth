@@ -3,7 +3,7 @@ import { LightningElement, track } from 'lwc';
 export default class App extends LightningElement {
     @track loggedUser = undefined;
     @track state;
-    SALESFORCE_URL = 'https://notaroenrico-dev-ed.lightning.force.com/';
+    SALESFORCE_URL = 'https://notaroenrico-dev-ed.my.salesforce.com/';
 
     connectedCallback() {
         var urlParams = new URL(document.location.toString().replace('#', '?'))

@@ -4,7 +4,7 @@
         <h2>External IDP Auth</h2>
         <div class="actions">
             <template if:true={loggedUser}>
-                <span class="user-display-name">{loggedUser.display_name}</span>
+                <span class="user-display-name">{loggedUser.name}</span>
                 <br />
                 <a href="/oauth2/logout">
                     <button type="button" class="brand">Log Out</button>

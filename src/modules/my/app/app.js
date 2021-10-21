@@ -27,7 +27,7 @@ export default class App extends LightningElement {
 						'Content-Type': 'application/json' ,
 						'Authorization' : 'Bearer ' + access_token,
 						'Accept' : 'application/json',
-						"Access-Control-Allow-Origin": 'https://notaroenrico-dev-ed.my.salesforce.com/'
+						"Access-Control-Allow-Origin": 'https://notaroenrico-dev-ed.my.salesforce.com'
 					}
                 }
             )
@@ -36,7 +36,7 @@ export default class App extends LightningElement {
 		})
                 .then((jsonResponse) => {
                     console.log('jsonResponse ===> '+JSON.stringify(jsonResponse));
-                    this.loggedUser = data;
+                    this.loggedUser = jsonResponse;
                 })
                 .catch((error) => console.log(error));
         }

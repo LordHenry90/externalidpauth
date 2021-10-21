@@ -2,7 +2,7 @@ import { LightningElement, track } from 'lwc';
 
 export default class App extends LightningElement {
     @track loggedUser = undefined;
-	@track logoutURL = 'https://notaroenrico-dev-ed.my.salesforce.com/services/oauth2/logout';
+	@track logoutURL = '';
     @track state;
     SALESFORCE_URL = 'https://notaroenrico-dev-ed.my.salesforce.com/';
 
@@ -18,6 +18,7 @@ export default class App extends LightningElement {
             this.state = 'login';
         } else {
             console.log('fetch');
+			this.logoutURL = 'https://notaroenrico-dev-ed.my.salesforce.com/services/oauth2/logout?access_token=' + access_token + '&format=json';
             fetch(
                 this.SALESFORCE_URL + 'services/oauth2/userinfo?access_token=' + access_token + '&format=json',
                 {
@@ -38,14 +39,6 @@ export default class App extends LightningElement {
                 })
                 .catch((error) => console.log(error));
         }
-        /*getLoggedInUser().then((response) => {
-            if (response.user_id === undefined) {
-                this.loggedUser = undefined;
-                this.state = 'login';
-            } else {
-                this.loggedUser = response;
-            }
-        });*/
     }
 
     get isLoginView() {

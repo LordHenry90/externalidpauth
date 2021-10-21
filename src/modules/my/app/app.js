@@ -36,7 +36,7 @@ export default class App extends LightningElement {
                     console.log('jsonResponse ===> '+JSON.stringify(jsonResponse));
                     this.loggedUser = data;
                 })
-                .catch((error) => console.log('callout error ===> '+JSON.stringify(error)));
+                .catch((error) => console.log(error));
         }
         /*getLoggedInUser().then((response) => {
             if (response.user_id === undefined) {

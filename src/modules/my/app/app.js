@@ -18,14 +18,14 @@ export default class App extends LightningElement {
         } else {
             console.log('fetch');
             fetch(
-                this.SALESFORCE_URL + 'services/oauth2/userinfo?access_token=' + access_token +
-				'&format=json',
+                this.SALESFORCE_URL + 'services/oauth2/userinfo',
                 {
                     method: 'GET',
                     headers: { 
 						'Content-Type': 'application/json' ,
-						'Authorization' : access_token,
-						'Accept' : 'application/json'
+						'Authorization' : 'Bearer ' + access_token,
+						'Accept' : 'application/json',
+						"Access-Control-Allow-Origin": '*'
 					}
                 }
             )

@@ -4,8 +4,6 @@ const dot = require('dotenv').config();
 export default class App extends LightningElement {
     @track loggedUser = undefined;
     @track state;
-    //SALESFORCE_URL = 'https://notaroenrico-dev-ed.my.salesforce.com';
-    //CALLBACK_URL = 'https://externalidpauth.herokuapp.com/';
 
     connectedCallback() {
         console.log(process.env.SALESFORCE_URL);

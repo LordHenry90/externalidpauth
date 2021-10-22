@@ -1,8 +1,7 @@
 import { createElement } from 'lwc';
 import MyApp from 'my/app';
 import '@lwc/synthetic-shadow';
-
-const dotenv = require('dotenv').config();
+const dotenv = require('./default');
 
 const indexApp = createElement('my-app', { is: MyApp });
 // eslint-disable-next-line @lwc/lwc/no-document-query

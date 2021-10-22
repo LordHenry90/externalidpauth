@@ -18,7 +18,7 @@ export default class App extends LightningElement {
             this.state = 'login';
         } else {
             console.log('fetch');
-			this.logoutURL = this.SALESFORCE_URL + 'services/oauth2/revoke?access_token=' + access_token;
+			this.logoutURL = this.SALESFORCE_URL + 'services/oauth2/revoke?token=' + access_token;
             fetch(
                 this.SALESFORCE_URL + 'services/oauth2/userinfo?access_token=' + access_token + '&format=json',
                 {

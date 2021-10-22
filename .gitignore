@@ -3,7 +3,7 @@ logs
 *.log
 *-debug.log
 *-error.log
-.env
+
 # Standard lib folder
 /lib
 
@@ -30,3 +30,7 @@ $RECYCLE.BIN/
 
 # Husky
 .husky
+
+# Development/Environment
+dev
+.env

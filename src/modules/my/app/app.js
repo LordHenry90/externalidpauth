@@ -18,7 +18,7 @@ export default class App extends LightningElement {
             this.state = 'login';
         } else {
             console.log('fetch');
-			this.logoutURL = 'https://webresults-a1-dev-ed.my.salesforce.com/services/auth/rp/oidc/logout';
+			this.logoutURL = this.SALESFORCE_URL + 'services/oauth2/revoke?access_token=' + access_token;
             fetch(
                 this.SALESFORCE_URL + 'services/oauth2/userinfo?access_token=' + access_token + '&format=json',
                 {

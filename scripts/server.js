@@ -4,7 +4,7 @@ const helmet = require('helmet');
 const express = require('express');
 const path = require('path');
 const app = express();
-const dotenv = require('../preload.js');
+const dotenv = require('../../../../preload.js');
 app.use(helmet());
 app.use(compression());
 

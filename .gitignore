@@ -3,7 +3,7 @@ logs
 *.log
 *-debug.log
 *-error.log
-
+.env
 # Standard lib folder
 /lib
 

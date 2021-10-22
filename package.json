@@ -12,6 +12,7 @@
     },
     "devDependencies": {
         "@salesforce-ux/design-system": "^2.16.2",
+        "dotenv-webpack": "^7.0.3",
         "eslint": "^8.0.1",
         "eslint-plugin-inclusive-language": "^2.1.1",
         "husky": "^7.0.4",

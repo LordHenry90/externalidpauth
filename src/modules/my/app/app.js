@@ -5,6 +5,7 @@ export default class App extends LightningElement {
 	@track logoutURL = '';
     @track state;
     SALESFORCE_URL = 'https://notaroenrico-dev-ed.my.salesforce.com/';
+    CALLBACK_URL = 'https://externalidpauth.herokuapp.com/';
 
     connectedCallback() {
         var urlParams = new URL(document.location.toString().replace('#', '?'))
@@ -18,7 +19,7 @@ export default class App extends LightningElement {
             this.state = 'login';
         } else {
             console.log('fetch');
-			this.logoutURL = this.SALESFORCE_URL + 'services/oauth2/revoke?token=' + access_token;
+			this.logoutURL = this.SALESFORCE_URL + 'services/oauth2/revoke?token=' + access_token + '&callback=' + this.CALLBACK_URL;
             fetch(
                 this.SALESFORCE_URL + 'services/oauth2/userinfo?access_token=' + access_token + '&format=json',
                 {

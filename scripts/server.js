@@ -3,6 +3,7 @@ const compression = require('compression');
 const helmet = require('helmet');
 const express = require('express');
 const path = require('path');
+const dot = require('dotenv').config();
 
 const app = express();
 app.use(helmet());
@@ -17,7 +18,7 @@ app.use(function (req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-	res.header("Content-Security-Policy","connect-src 'self' https://notaroenrico-dev-ed.my.salesforce.com/")
+	res.header("Content-Security-Policy","connect-src 'self' " + process.env.SALESFORCE_URL);
   if (req.method === 'OPTIONS') {
     res.status(204);
 } next();

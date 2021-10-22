@@ -8,6 +8,8 @@ const app = express();
 app.use(helmet());
 app.use(compression());
 
+export { configDotEnv };
+
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3001;
 const DIST_DIR = './dist';

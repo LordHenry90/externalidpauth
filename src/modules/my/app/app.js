@@ -1,6 +1,5 @@
 import { LightningElement, track } from 'lwc';
 
-const Dotenv = require('dotenv-webpack');
 export default class App extends LightningElement {
     @track loggedUser = undefined;
     @track state;

@@ -5,3 +5,4 @@ import '@lwc/synthetic-shadow';
 const indexApp = createElement('my-app', { is: MyApp });
 // eslint-disable-next-line @lwc/lwc/no-document-query
 document.querySelector('#main').appendChild(indexApp);
+console.log(process.env)

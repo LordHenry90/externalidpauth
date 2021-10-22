@@ -5,7 +5,6 @@ export default class App extends LightningElement {
     @track state;
 
     connectedCallback() {
-        console.log(process.env.SALESFORCE_URL);
         var urlParams = new URL(document.location.toString().replace('#', '?'))
             .searchParams;
         var access_token = urlParams.get('access_token');

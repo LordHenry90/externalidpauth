@@ -11,5 +11,4 @@ if (!('error' in result)) {
   envs = {};
   _.each(process.env, (value, key) => envs[key] = value);
 }
-
 module.exports = envs;

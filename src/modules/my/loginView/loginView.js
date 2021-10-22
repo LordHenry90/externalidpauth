@@ -1,5 +1,5 @@
 import { LightningElement, track } from 'lwc';
-import { configDotEnv } from './server'
+import { configDotEnv } from 'scripts/server'
 
 export default class LoginView extends LightningElement {
 

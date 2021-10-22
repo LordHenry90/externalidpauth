@@ -3,7 +3,7 @@ const compression = require('compression');
 const helmet = require('helmet');
 const express = require('express');
 const path = require('path');
-export const configDotEnv = require('dotenv').config();
+module.exports const configDotEnv = require('dotenv').config();
 const app = express();
 app.use(helmet());
 app.use(compression());

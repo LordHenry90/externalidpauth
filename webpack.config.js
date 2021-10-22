@@ -1,11 +1,15 @@
 // webpack.config.js
-const dotenv = require('dotenv').config({ path: __dirname + '/.env' });
+const webpack = require('webpack')
+const dotenv = require('dotenv')
 
 module.exports = {
-plugins: [
+  //...
+  plugins: [
+    // ...
     new webpack.DefinePlugin({
-      'process.env': JSON.stringify(dotenv.parsed),
-      'process.env.NODE_ENV': JSON.stringify(isDevelopment ? 'development' : 'production'),
-    }),
-  ].filter(Boolean),
-};
+       'process.env': JSON.stringify(dotenv.config().parsed) // it will automatically pick up key values from .env file
+    })
+    // ...
+  ]
+  //...
+}

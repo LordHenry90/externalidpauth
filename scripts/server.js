@@ -3,12 +3,9 @@ const compression = require('compression');
 const helmet = require('helmet');
 const express = require('express');
 const path = require('path');
-const configDotEnv = require('dotenv').config();
 const app = express();
 app.use(helmet());
 app.use(compression());
-
-export { configDotEnv };
 
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3001;
